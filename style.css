@@ -25,6 +25,7 @@ a:hover {
     width: 100%;
     z-index: 100000;
     background: #FFFFFF url("img/pageload-spinner.gif") no-repeat center center;
+    /*bug l'image en url est introuvable dans le dossier */
 }
 
 .bloc {
@@ -88,11 +89,6 @@ a:hover {
     bottom: 0;
     left: 0;
     right: 0;
-}
-
-.texture-paper::before {
-    background: url("img/texture-paper.png");
-    background-size: 280px 280px;
 }
 
 .b-parallax {
@@ -277,8 +273,8 @@ a:hover {
     margin-left: 0;
 }
 
-.row.row-no-gutters > [class^="col-"],
-.row.row-no-gutters > [class*=" col-"] {
+.row.row-no-gutters>[class^="col-"],
+.row.row-no-gutters>[class*=" col-"] {
     padding-right: 0;
     padding-left: 0;
 }
@@ -292,8 +288,11 @@ a:hover {
     z-index: 1;
 }
 
+
+/* bug au dessus = inutil */
+
 .navbar-brand {
-    height: auto;
+    height: 50px;
     padding: 3px 15px;
     font-size: 25px;
     font-weight: normal;
@@ -302,7 +301,7 @@ a:hover {
 }
 
 .navbar-brand img {
-    max-height: 200px;
+    /* max-height: 200px; */
     margin: 0 5px 0 0;
     display: inline;
 }
@@ -315,6 +314,9 @@ a:hover {
     margin: 0;
 }
 
+
+/* bug au dessus = inutil */
+
 .navbar .nav {
     padding-top: 2px;
     margin-right: -16px;
@@ -322,18 +324,18 @@ a:hover {
     z-index: 1;
 }
 
-.nav > li {
+.nav>li {
     float: left;
     margin-top: 4px;
     font-size: 16px;
 }
 
-.navbar-nav .open .dropdown-menu > li > a {
+.navbar-nav .open .dropdown-menu>li>a {
     text-align: inherit;
 }
 
-.nav > li a:hover,
-.nav > li a:focus {
+.nav>li a:hover,
+.nav>li a:focus {
     background: transparent;
 }
 
@@ -341,6 +343,9 @@ a:hover {
     margin: 10px 10px 0 0;
     border: 0px;
 }
+
+
+/* bug border = inutil */
 
 .navbar-toggle:hover {
     background: transparent!important;
@@ -370,14 +375,15 @@ a:hover {
         transform: translate(0, -50%);
         -webkit-transform: translateY(-50%);
     }
-    .nav > li .dropdown-menu a,
-    .nav > li .dropdown-menu a:hover {
+    .nav>li .dropdown-menu a,
+    .nav>li .dropdown-menu a:hover {
         color: #484848;
     }
     .nav-invert .site-navigation {
         left: 0;
         right: 0;
     }
+    /* bug au dessus = inutil */
     .nav-center {
         text-align: center;
     }
@@ -386,7 +392,7 @@ a:hover {
     }
     .nav-center .navbar-header,
     .nav-center .navbar-brand,
-    .nav-center .nav > li {
+    .nav-center .nav>li {
         float: none;
         display: inline-block;
     }
@@ -403,7 +409,7 @@ a:hover {
     }
 }
 
-.nav > li > .dropdown a {
+.nav>li>.dropdown a {
     background: none!important;
     display: block;
     padding: 14px 15px;
@@ -493,6 +499,9 @@ button {
     border-radius: 0;
 }
 
+
+/* bug au dessus = inutil */
+
 .panel-rd {
     border-radius: 30px;
 }
@@ -510,25 +519,11 @@ button {
     box-shadow: none;
 }
 
-.scrollToTop {
-    width: 40px;
-    height: 40px;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    opacity: 0;
-    z-index: 500;
-    transition: all .3s ease-in-out;
-}
 
-.scrollToTop span {
-    margin-top: 6px;
-}
+/* bug utile */
 
-.showScrollTop {
-    font-size: 14px;
-    opacity: 1;
-}
+
+/* bug utile */
 
 a[data-lightbox] {
     position: relative;
@@ -571,6 +566,9 @@ a[data-lightbox]:hover img {
     margin: 0 auto 0;
 }
 
+
+/* bug écriture 0 auto */
+
 #lightbox-modal .modal-dialog img {
     max-height: 90vh;
     margin: 0 auto;
@@ -606,6 +604,9 @@ a[data-lightbox]:hover img {
     opacity: 1.0;
     color: #FFF;
 }
+
+
+/* bug écriture 1.0 */
 
 .next-lightbox,
 .prev-lightbox {
@@ -666,6 +667,9 @@ a {
     font-size: 36px;
 }
 
+
+/* bug fs avec 2px de diff bof */
+
 .statement-bloc-text {
     line-height: 26px;
     font-style: italic;
@@ -676,6 +680,9 @@ a {
     margin: auto auto auto auto;
 }
 
+
+/* bug margin auto */
+
 p {
     font-size: 11px;
 }
@@ -685,10 +692,16 @@ p {
     margin: auto auto auto auto;
 }
 
+
+/* bug margin auto */
+
 .h1 {
     font-size: 20px;
     font-family: "Open Sans";
 }
+
+
+/* bug pourquoi changer la ff ? */
 
 .cta-hero {
     margin-top: 22px;
@@ -699,10 +712,16 @@ p {
     font-weight: 700;
 }
 
+
+/* bug padding 12px 28px */
+
 .social {
     max-width: 400px;
     margin: auto auto auto auto;
 }
+
+
+/* bug margin auto */
 
 h2 {
     font-size: 22px;
@@ -716,19 +735,31 @@ h3 {
     color: #333333!important;
 }
 
+
+/* bug pourquoi l'avoir avec les autres ?  */
+
 .med-width-whitespace {
     max-width: 800px;
     margin: auto auto auto auto;
     box-shadow: 0px 0px 0px #000000;
 }
 
+
+/* bug margin auto + box shadow inutil */
+
 h1 {
     color: #333333!important;
 }
 
+
+/* bug wtf ?  */
+
 h4 {
     color: #333333!important;
 }
+
+
+/* bug wtf ?  */
 
 .icons {
     margin-bottom: 14px;
@@ -738,6 +769,9 @@ h4 {
 .white {
     color: #FFFFFF!important;
 }
+
+
+/* bug wtf ?  */
 
 .portfolio-thumb {
     margin-bottom: 24px;
@@ -809,6 +843,9 @@ h4 {
     border-color: #364577!important;
 }
 
+
+/* bug la fiesta du important et du mélange des couleurs */
+
 .bg-dots-bg {
     background-image: url("img/dots-bg.png");
 }
@@ -822,7 +859,18 @@ h4 {
 }
 
 .bg-presentation {
-    background-image: url("img/image-de-presentation.bmp");
+    background-image: url("img/image-de-presentation.jpg");
+}
+
+.logo_header {
+    width: 360px;
+    position: relative;
+    top: -153px;
+    left: -60px;
+}
+
+.logo_rounded_size {
+    width: 100px;
 }
 
 @media (max-width: 1024px) {
@@ -923,7 +971,7 @@ h4 {
         -webkit-transform: none;
         -ms-transform: none;
     }
-    .nav > li {
+    .nav>li {
         margin-top: 0;
         border-bottom: 1px solid rgba(0, 0, 0, .1);
         background: rgba(0, 0, 0, .05);
@@ -931,7 +979,7 @@ h4 {
         padding-left: 15px;
         width: 100%;
     }
-    .nav > li:hover {
+    .nav>li:hover {
         background: rgba(0, 0, 0, .08);
     }
     .dropdown .dropdown a .caret {
