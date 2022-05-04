@@ -652,7 +652,7 @@ label,
 a {
     font-family: "helvetica";
     font-weight: 400;
-    color: #575757!important;
+    color: #311f16!important;
 }
 
 .container {
@@ -684,7 +684,7 @@ a {
 /* bug margin auto */
 
 p {
-    font-size: 11px;
+    font-size: 1em;
 }
 
 .tight-width-whitespace {
@@ -696,7 +696,7 @@ p {
 /* bug margin auto */
 
 .h1 {
-    font-size: 20px;
+    font-size: 2em;
     font-family: "Open Sans";
 }
 
@@ -787,7 +787,7 @@ h4 {
 }
 
 .black-background {
-    background-color: rgba(165, 147, 99, 0.7);
+    background-color: rgba(243, 151, 108, 1);
     padding: 40px 40px 40px 40px;
 }
 
